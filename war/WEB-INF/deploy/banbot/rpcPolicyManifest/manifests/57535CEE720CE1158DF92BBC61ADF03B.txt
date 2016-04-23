@@ -1,0 +1,2 @@
+serviceClass: org.telegram.banbot.client.GreetingService
+path: 2A541B354E26434B100C22DFC32C859A.gwt.rpc

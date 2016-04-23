@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <!--  servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>org.telegram.banbot.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/banbot/greet</url-pattern>
+  </servlet-mapping>-->
+  
+  <!-- servlet>
+	<servlet-name>TelegramImpl</servlet-name>
+	<servlet-class>org.telegram.banbot.server.TelegramImpl</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>TelegramImpl</servlet-name>
+	<url-pattern>/cron/mycronjob</url-pattern>
+  </servlet-mapping> -->
+  
+  <servlet>
+	<servlet-name>TelegramWebhook</servlet-name>
+	<servlet-class>org.telegram.banbot.server.TelegramWebhook</servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>TelegramWebhook</servlet-name>
+	<url-pattern>/banbot/update</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>remoteLoggingService</servlet-name>
+    <servlet-class>com.google.gwt.logging.server.RemoteLoggingServiceImpl</servlet-class>
+  </servlet>
+  
+  <!-- security-constraint>
+       <web-resource-collection>
+           <web-resource-name>profile</web-resource-name>
+           <url-pattern>/banbot/*</url-pattern>
+       </web-resource-collection>
+       <user-data-constraint>
+           <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+       </user-data-constraint>
+   </security-constraint> -->
+
+  <!-- Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>remoteLoggingService</servlet-name>
+    <url-pattern>/banbot/remote_logging</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>BanBot.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

@@ -1,0 +1,4 @@
+# Module banbot
+# RPC service class, partial path of RPC policy file
+org.telegram.banbot.client.GreetingService, 2A541B354E26434B100C22DFC32C859A.gwt.rpc
+com.google.gwt.logging.shared.RemoteLoggingService, 9E31B1B3BE7D16726484277FAA71DEB4.gwt.rpc
